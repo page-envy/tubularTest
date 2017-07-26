@@ -6,14 +6,14 @@
 |* since 2010
 |* licensed under the MIT License
 |* Enjoy.
-|* 
+|*
 |* Thanks,
 |* Sean */
 
 ;(function ($, window) {
 
     // test for feature support and return if failure
-    
+
     // defaults
     var defaults = {
         ratio: 16/9, // usually either 4/3 or 16/9 -- tweak as needed
@@ -130,7 +130,7 @@
     // load yt iframe js api
 
     var tag = document.createElement('script');
-    tag.src = "//www.youtube.com/iframe_api";
+    tag.src = "https://www.youtube.com/iframe_api";
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
@@ -139,7 +139,7 @@
     $.fn.tubular = function (options) {
         return this.each(function () {
             if (!$.data(this, 'tubular_instantiated')) { // let's only run one
-                $.data(this, 'tubular_instantiated', 
+                $.data(this, 'tubular_instantiated',
                 tubular(this, options));
             }
         });
